@@ -144,6 +144,7 @@ def trip_duration_stats(df):
     print('The total travel time was', total_timestamp)
 
     print()
+
     # TO DO: display mean travel time
     mean_traveltime = df["Trip Duration"].mean()
     mean_timestamp = str(datetime.timedelta(seconds=int(mean_traveltime)))
@@ -164,6 +165,7 @@ def user_stats(df):
     user_types = df['User Type'].value_counts()
     print('Types of users:\n', user_types)
     print()
+    
     # TO DO: Display counts of gender
     if "Gender" in df.columns:
         gender = df['Gender'].value_counts()
