@@ -13,4 +13,4 @@ This is a simple python script which helps a user explore bikeshare data from Ci
 * washington.csv
 
 ### Credits
-
+Udacity Programming for Data Science Team
