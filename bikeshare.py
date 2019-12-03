@@ -17,7 +17,7 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+    # Get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     print('Would you like to explore data of Chicago, New York City or Washington?')
     city = input('Enter name of city:')
     city = city.lower()
@@ -26,7 +26,7 @@ def get_filters():
     print('Great! We are checking data for', city)
 
     
-    # TO DO: get user input for month (all, january, february, ... , june)
+    # Get user input for month (all, january, february, ... , june)
     monthes = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
     print('Which month would you like to see data for?')
     month = input('Please enter a month between january and june only or select "all" for all: ')
@@ -35,7 +35,7 @@ def get_filters():
         print('Oops! Missing!')
         month = input('Please re-enter a chosen month mentioned or "all" for all: ')
 
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+    # Get user input for day of week (all, monday, tuesday, ... sunday)
     dayz = ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
     print('Which day of the week would you like to see data for?')
     day = input('Enter day of the week or "all" for all days:')
@@ -89,13 +89,13 @@ def time_stats(df):
 
 
 
-    # TO DO: display the most common day of week
+    # Display the most common day of week
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['day_of_week'] = (df['Start Time']).dt.weekday_name
     popular_day = (df['day_of_week']).mode()[0]
     print('Most Common Day of Travel is', popular_day)
 
-    # TO DO: display the most common start hour
+    # Display the most common start hour
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     df['hour'] = (df['Start Time']).dt.hour
     popular_hour = (df['hour']).mode()[0]
@@ -209,7 +209,7 @@ def main():
 
             else :
              #if input is not 'yes' end loop
-                break;
+                break
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
